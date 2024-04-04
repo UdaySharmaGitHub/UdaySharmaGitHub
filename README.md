@@ -23,7 +23,7 @@ Currently, I am expanding my skill set by pursuing <b> MERN Stack Development</b
 <a href="https://auth.geeksforgeeks.org/user/udaysharma2003" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="udaysharma2003" height="30" width="40" /></a>
 </p>
 
-## 💼 Technical Skills
+# 💻 Tech Stack:
 
 <p align="center">
   <a href="https://skillicons.dev">
@@ -55,6 +55,6 @@ Currently, I am expanding my skill set by pursuing <b> MERN Stack Development</b
   </a>
 </p>
 
-
+# 📊 GitHub Stats:
 <p align="center"><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=udaysharmagithub&" alt="udaysharmagithub" /></p>
 

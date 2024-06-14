@@ -32,12 +32,14 @@ A dynamic Full Stack Developer eager to bring a fresh perspective,
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 
 ### <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="40"> Coding Profiles 
-<a href="https://leetcode.com/u/udaysharma2003/" target="_blank">
+<p align=center >
+ <a href="https://leetcode.com/u/udaysharma2003/" target="_blank">
  <img align="center" src='https://leetcard.jacoblin.cool/udaysharma2003?hide=ranking&border=0&radius=21' width='380"'>
 </a>
 <a href="https://www.geeksforgeeks.org/user/udaysharma2003/" target="_blank">
  <img align="center" src='https://geeks-for-geeks-stats-api-napiyo.vercel.app/?userName=udaysharma2003' width='280"'>
 </a>
+</p>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 
@@ -75,27 +77,19 @@ A dynamic Full Stack Developer eager to bring a fresh perspective,
 
 ### 📊 GitHub Stats:
 <p align="center"><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=udaysharmagithub&" alt="udaysharmagithub" /></p>
+<p align="center">
+ <a href="https://github.com/UdaySharmaGitHub" align="center"><img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api?username=UdaySharmaGitHub&theme=github_dark&show_icons=true" alt="Uday's GitHub stats" />
+<img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=UdaySharmaGitHub&theme=github_dark&layout=compact" alt="Top Langs" width="400"/>
+</a>
+</p>
 
-| ![Uday's GitHub stats](https://github-readme-stats-sigma-five.vercel.app/api?username=UdaySharmaGitHub&theme=github_dark&show_icons=true) | [![Top Langs](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=UdaySharmaGitHub&theme=github_dark&layout=compact)](https://github.com/UdaySharmaGitHub/) |
-|---|---|
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 
 <div align="center">
-    <img src="https://cultofthepartyparrot.com/parrots/hd/githubparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/flags/hd/iranparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/asyncparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/60fpsparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/jumpingparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/opensourceparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/dealwithitnowparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/hypnoparrotlight.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/meldparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/slomoparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/moonwalkingparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/stableparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/scienceparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/pirateparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/footballparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/illuminatiparrot.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/hypnoparrotdark.gif" width="50" height="50"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/mustacheparrot.gif" width="50" height="50"/>
+<img src="https://user-images.githubusercontent.com/74038190/212750680-266fa8aa-39f1-4e8b-8873-7181dbaf3d7c.gif" width="500">
+ <img src="https://user-images.githubusercontent.com/74038190/212750996-938b257b-266c-45a7-9af7-655341c0f58b.gif" width="500">
+<img align="center" src="https://user-images.githubusercontent.com/74038190/212747107-5b654ba5-31c6-4366-b42b-51b822e9bc52.gif" width="500">
 </div>
+
+
+

@@ -13,9 +13,9 @@ A dynamic Full Stack Developer eager to bring a fresh perspective,
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=udaysharmagithub&label=Profile%20views&color=0e75b6&style=flat" alt="udaysharmagithub" /> </p>
 
 - ❤️ I’m currently in love with <b>3D Designing and Modelling</b>.
-- 🌱 I’m currently learning **React.js and Back-end Frameworks and Devops**
+- 🌱 I’m currently learning **TypeScript, Advance Back-end Development and Devops**
 - 👯 I’m looking to collaborate on **Open Source Projects**
-- 💬 Ask me about **HTML5, CSS3, JavaScript, Bootstrap, MongoDB, React.js, Node.js, Express.js, Git, C++, Java, JSP, JDBC**
+- 💬 Ask me about **HTML5, CSS3, JavaScript, Bootstrap, MongoDB, React.js, Node.js, Express.js, Git & GitHub, TypeScript , C++, Java**
 - 📫 How to reach me **mrudaysharma4600@gmail.com**
 - ⚡ Fun fact **I love learning new things, Teaching and Creating Content**
 

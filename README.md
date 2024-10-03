@@ -28,7 +28,7 @@ A proficient Full Stack Developer with extensive experience in developing scalab
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 
-### <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="40"> Coding Profiles 
+### <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="40"> My Stats
 <p align=center >
  <a href="https://leetcode.com/u/udaysharma2003/" target="_blank">
  <img align="center" src='https://leetcard.jacoblin.cool/udaysharma2003?hide=ranking&border=0&radius=21' width='380"'>
@@ -36,7 +36,11 @@ A proficient Full Stack Developer with extensive experience in developing scalab
 <a href="https://www.geeksforgeeks.org/user/udaysharma2003/" target="_blank">
  <img align="center" src='https://geeks-for-geeks-stats-api-napiyo.vercel.app/?userName=udaysharma2003' width='280"'>
 </a>
+
+[![An image of @udaysharma2003's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/udaysharma2003)](https://holopin.io/@udaysharma2003)
+
 </p>
+
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 

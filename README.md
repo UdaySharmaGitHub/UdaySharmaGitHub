@@ -1,13 +1,12 @@
 <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/d48893bd-0757-481c-8d7e-ba3e163feae7" />
 
-<h3 align="center" >Hi there, I'm Uday Sharma <img src="https://user-images.githubusercontent.com/74038190/216654128-ad1c5827-e18e-43a6-974b-3669cbb082b9.gif" width="60" /></h3>
+<h2 align="center" >Hi there, I'm Uday Sharma <img src="https://user-images.githubusercontent.com/74038190/216654128-ad1c5827-e18e-43a6-974b-3669cbb082b9.gif" width="60" /></h2>
 <h3 align="center"><a href=""><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=700&lines=A+passionate+Software+developer+from+India" alt="Typing SVG" /></a></h3>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 
 ### <img src="https://github.com/SP-XD/SP-XD/blob/main/images/message.gif?raw=true" width="30" /> About Me 
 A proficient Full Stack Developer with extensive experience in developing scalable Frontend and backend systems and Full Stack Apps. Eager to bring a fresh perspective, adaptability, and enthusiasm to a dynamic team. I am working on upscaling my skills by learning <b>Backend development</b> and <b>LLM</b>. Passionate and always eager to learn new technologies and frameworks to improve the quality of the Work.  
-<p align="right"> <img src="https://komarev.com/ghpvc/?username=udaysharmagithub&label=Profile%20views&color=0e75b6&style=flat" alt="udaysharmagithub" /> </p>
 
 - ❤️ I’m currently in love with <b>AI Full Stack Applicatons</b>.
 - 🌱 I’m currently learning **TypeScript, Advance Back-end Development and Devops**
@@ -25,6 +24,22 @@ A proficient Full Stack Developer with extensive experience in developing scalab
 [![Be A Coder](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/beacoder)
 [![CodeWithUday](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/codewithuday)
 [![ChromaEdits](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/chromaedits)
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
+
+### All Badges🎯
+- ***@LeetCode***
+<p align="center">
+<img src="https://assets.leetcode.com/static_assets/marketing/2024-200.gif" width="50px"></img>
+<img src="https://leetcode.com/static/images/badges/2024/gif/2024-06.gif" width="50px"></img>
+<img src="https://leetcode.com/static/images/badges/2024/gif/2024-07.gif" width="50px"></img>
+<img src="https://leetcode.com/static/images/badges/2024/gif/2024-08.gif" width="50px"></img>
+<img src="https://leetcode.com/static/images/badges/2024/gif/2024-09.gif" width="50px"></img>
+<img src="https://assets.leetcode.com/static_assets/marketing/2023-50.gif" width="50px"></img>
+<img src="https://assets.leetcode.com/static_assets/marketing/2024-50.gif" width="50px"></img>
+<img src="https://assets.leetcode.com/static_assets/marketing/2024-100-new.gif" width="50px"></img>
+
+</p>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 
@@ -77,15 +92,22 @@ A proficient Full Stack Developer with extensive experience in developing scalab
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 
 ### 📊 GitHub Stats:
-<p align="center"><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=udaysharmagithub&" alt="udaysharmagithub" /></p>
 <p align="center">
- <a href="https://github.com/UdaySharmaGitHub" align="center"><img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api?username=UdaySharmaGitHub&theme=github_dark&show_icons=true" alt="Uday's GitHub stats" />
-<img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=UdaySharmaGitHub&theme=github_dark&layout=compact" alt="Top Langs" width="400"/>
-</a>
+ <a href="https://https://github.com/UdaySharmaGitHub/github-readme-streak-stats">
+        <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Prince Singh streak" src="https://github-readme-streak-stats.herokuapp.com/?user=UdaySharmaGitHub&theme=black-ice&hide_border=true&stroke=0000&background=060A0CD0"/>
+    </a>
+ <br/>
+<a href="https://github.com/UdaySharmaGitHub/github-readme-stats"><img alt="Uday Sharma Github Stats" src="https://github-readme-stats.vercel.app/api?username=UdaySharmaGitHub&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117" /></a>
+  <a href="https://github.com/UdaySharmaGitHub/github-readme-stats"><img alt="Uday Sharma Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=UdaySharmaGitHub&langs_count=8&count_private=true&layout=compact&theme=react&hide_border=true&bg_color=0D1117" /></a>
+  
 </p>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 
-
+### ❤ Views and Followers
+<a href="https://github.com/Meghna-DAS/github-profile-views-counter">
+    <img src="https://komarev.com/ghpvc/?username=UdaySharmaGitHub">
+</a>
+<a href="https://github.com/UdaySharmaGitHub?tab=followers"><img src="https://img.shields.io/github/followers/UdaySharmaGitHub?label=Followers&style=social" alt="GitHub Badge"></a>
 
 

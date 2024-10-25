@@ -12,7 +12,7 @@ A proficient Full Stack Developer with extensive experience in developing scalab
 - ❤️ I’m currently in love with <b>AI Full Stack Applicatons</b>.
 - 🌱 I’m currently learning **TypeScript, Advance Back-end Development and Devops**
 - 👯 I’m looking to collaborate on **Open Source Projects**
-- 💬 Ask me about **HTML5, CSS3, JavaScript, Bootstrap, MongoDB, React.js, Node.js, Express.js, Git & GitHub, TypeScript , C++, Java**
+- 💬 Ask me about **JavaScript, MongoDB, React.js, Node.js, Express.js, Git & GitHub, TypeScript , DSA, Java, Frontend ,Backend ,Authentication**
 - 📫 How to reach me **mrudaysharma4600@gmail.com**
 - ⚡ Fun fact **I love learning new things, Teaching and Creating Content**
 

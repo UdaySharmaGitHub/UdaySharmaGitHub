@@ -48,6 +48,7 @@ A proficient Full Stack Developer with extensive experience in developing scalab
 ### All Badges🎯
 - ***@LeetCode***
 <p align="center">
+<img src="https://assets.leetcode.com/static_assets/marketing/2024.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/marketing/2024-200.gif" width="50px"></img>
 <img src="https://leetcode.com/static/images/badges/2024/gif/2024-06.gif" width="50px"></img>
 <img src="https://leetcode.com/static/images/badges/2024/gif/2024-07.gif" width="50px"></img>

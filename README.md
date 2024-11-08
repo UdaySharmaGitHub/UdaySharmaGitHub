@@ -114,7 +114,7 @@ A proficient Full Stack Developer with extensive experience in developing scalab
 ### 📊 GitHub Stats:
 <p align="center">
  <a href="https://https://github.com/UdaySharmaGitHub/github-readme-streak-stats">
-        <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Prince Singh streak" src="https://github-readme-streak-stats.herokuapp.com/?user=UdaySharmaGitHub&theme=black-ice&hide_border=true&stroke=0000&background=060A0CD0"/>
+        <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Uday Sharma streak" src="https://github-readme-streak-stats.herokuapp.com/?user=UdaySharmaGitHub&theme=black-ice&hide_border=true&stroke=0000&background=060A0CD0"/>
     </a>
  <br/>
 <a href="https://github.com/UdaySharmaGitHub/github-readme-stats"><img alt="Uday Sharma Github Stats" src="https://github-readme-stats.vercel.app/api?username=UdaySharmaGitHub&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117" /></a>

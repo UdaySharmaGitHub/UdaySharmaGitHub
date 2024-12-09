@@ -127,9 +127,11 @@ A <b>proficient Full Stack Developer</b> with extensive experience in developing
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 
 ### ❤ Views and Followers
+<p align="center">
 <a href="https://github.com/Meghna-DAS/github-profile-views-counter">
     <img src="https://komarev.com/ghpvc/?username=UdaySharmaGitHub">
 </a>
 <a href="https://github.com/UdaySharmaGitHub?tab=followers"><img src="https://img.shields.io/github/followers/UdaySharmaGitHub?label=Followers&style=social" alt="GitHub Badge"></a>
+</p>
 
 

@@ -1,6 +1,6 @@
 <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/d48893bd-0757-481c-8d7e-ba3e163feae7" />
 
-<h2 align="center" >Hi there✨, I'm Uday Sharma <img src="https://user-images.githubusercontent.com/74038190/216654128-ad1c5827-e18e-43a6-974b-3669cbb082b9.gif" width="60" /></h2>
+<h2 align="center" >Hi there ✨, I'm Uday Sharma <img src="https://user-images.githubusercontent.com/74038190/216654128-ad1c5827-e18e-43a6-974b-3669cbb082b9.gif" width="60" /></h2>
 <h3 align="center"><a href=""><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=700&lines=A+passionate+Software+developer+from+India" alt="Typing SVG" /></a></h3>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">

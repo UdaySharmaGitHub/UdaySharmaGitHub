@@ -48,6 +48,7 @@ A <b>proficient Full Stack Developer</b> with extensive experience in developing
 ### All Badges🎯
 - ***@LeetCode***
 <p align="center">
+<img src="https://assets.leetcode.com/static_assets/marketing/202502.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/others/2550.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/marketing/500_new.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/marketing/365.gif" width="50px"></img>

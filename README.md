@@ -48,12 +48,18 @@ A <b>proficient Full Stack Developer</b> with extensive experience in developing
 ### All Badges🎯
 - ***@LeetCode***
 <p align="center">
+<img src="https://assets.leetcode.com/static_assets/others/200.gif" width="50px"></img>
+<img src="https://assets.leetcode.com/static_assets/marketing/202506.gif" width="50px"></img>
+<img src="https://assets.leetcode.com/static_assets/marketing/202505.gif" width="50px"></img>
+<img src="https://assets.leetcode.com/static_assets/marketing/202504.gif" width="50px"></img>
+<img src="https://assets.leetcode.com/static_assets/others/25100.gif" width="50px"></img>
+<img src="https://assets.leetcode.com/static_assets/marketing/202503.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/marketing/202502.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/others/2550.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/marketing/500_new.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/marketing/365.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/marketing/2024.gif" width="50px"></img>
-<img src="https://leetcode.com/static/images/badges/dcc-2024-12.png" width="50px"></img>
+<img src="https://leetcode.com/static/images/badges/2024/gif/2024-12.gif" width="50px"></img>
 <img src="https://leetcode.com/static/images/badges/2024/gif/2024-11.gif" width="50px"></img>
 <img src="https://leetcode.com/static/images/badges/2024/gif/2024-10.gif" width="50px"></img>
 <img src="https://leetcode.com/static/images/badges/2024/gif/2024-09.gif" width="50px"></img>

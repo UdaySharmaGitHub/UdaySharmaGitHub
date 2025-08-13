@@ -8,7 +8,7 @@
 ### <img src="https://github.com/SP-XD/SP-XD/blob/main/images/message.gif?raw=true" width="30" /> About Me 
 A <b>proficient  Full Stack Developer</b> with extensive experience in developing scalable Frontend and backend systems and Full Stack Applications. Eager to bring a fresh perspective, adaptability, and enthusiasm to a dynamic team. I am working on upscaling my skills by learning <b>Advanced Backend development</b> ,<b>Gen AI</b> and <b>LLM</b>. Passionate and always eager to learn new technologies and frameworks to improve the quality of the Work.  
 
-- ❤️ I’m currently building <b>⚡⚡Emerging StartUps & Agencies⚡⚡</b>.
+- ❤️ I’m currently building <b>⚡ ⚡Emerging StartUps & Agencies⚡⚡</b>.
 - ❤️ I’m currently in love with <b>AI Full Stack Applicatons</b>.
 - 🌱 I’m currently learning **TypeScript, Advance Back-end Development and Devops**
 - 👯 I’m looking to collaborate on **Open Source Projects**

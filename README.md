@@ -1,12 +1,13 @@
 <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/d48893bd-0757-481c-8d7e-ba3e163feae7" />
 
 <h2 align="center" >Hi there ✨,I'm Uday Sharma <img src="https://user-images.githubusercontent.com/74038190/216654128-ad1c5827-e18e-43a6-974b-3669cbb082b9.gif" width="60" /></h2>
-<h3 align="center"><a href=""><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=700&lines=A+passionate+Software+developer+from+India" alt="Typing SVG" /></a></h3>
+<h3 align="center"><a href=""><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=19FFD6&center=true&vCenter=true&width=900&lines=A+passionate+Agentic+AI+developer+and+Software+Engineer" alt="Typing SVG" /></a></h3>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 
 ### <img src="https://github.com/SP-XD/SP-XD/blob/main/images/message.gif?raw=true" width="30" />About Me 
-A <b>proficient  Full Stack Developer</b> with extensive experience in developing scalable Frontend and backend systems and Full Stack Applications. Eager to bring a fresh perspective, adaptability, and enthusiasm to a dynamic team. I am working on upscaling my skills by learning <b>Advanced Backend development</b> ,<b>Gen AI</b> and <b>LLM</b>. Passionate and always eager to learn new technologies and frameworks to improve the quality of the Work.  
+I’m an 🤖 Agentic AI Developer and 💻 Software Engineer, passionate about building intelligent, autonomous systems that solve complex enterprise problems at scale. 🚀
+I Specialize in tackling enterprise-scale automation and decision-making challenges using multi-agent LLM systems 🧠. I focus on overcoming limitations of traditional pipelines by designing scalable, stateful AI architectures (⚡ RAG & GraphRAG) that enable efficient knowledge retrieval, reasoning, and workflow orchestration across distributed systems. 🌐
 
 - ❤️ I’m currently building<b>⚡⚡Emerging StartUps & Agencies ⚡⚡</b>.
 - ❤️ I’m currently in love with <b>AI Full Stack Applicatons</b>.

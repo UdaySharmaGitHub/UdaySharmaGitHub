@@ -57,7 +57,7 @@
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#0D1117', 'lineColor': '#3B4252', 'textColor': '#E6EDF3', 'fontSize': '16px', 'fontFamily': 'Segoe UI, sans-serif'}, 'flowchart': {'nodeSpacing': 30, 'rankSpacing': 60, 'padding': 20, 'curve': 'basis'}}}%%
-graph LR
+graph TB
     Me(("💡Current Skills"))
 
     %% Tier 1 — Domain Hubs (hexagons)

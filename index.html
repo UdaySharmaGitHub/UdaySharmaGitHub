@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills · Knowledge Graph</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:      #07071a;
+  --surface: rgba(255,255,255,0.03);
+  --border:  rgba(255,255,255,0.08);
+  --text:    #e6e6f0;
+  --muted:   rgba(230,230,240,0.45);
+  --dimmer:  rgba(230,230,240,0.22);
+}
+
+html, body {
+  width:100%; min-height:100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* subtle dot-grid */
+body::before {
+  content:'';
+  position:fixed; inset:0; z-index:0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px);
+  background-size: 38px 38px;
+  pointer-events:none;
+}
+
+/* ambient color halos */
+body::after {
+  content:'';
+  position:fixed; inset:0; z-index:0;
+  background:
+    radial-gradient(ellipse 600px 380px at 18% 22%, rgba(120,108,220,0.09), transparent),
+    radial-gradient(ellipse 500px 320px at 82% 78%, rgba(50,185,140,0.07), transparent),
+    radial-gradient(ellipse 420px 280px at 65% 20%, rgba(80,155,225,0.06), transparent),
+    radial-gradient(ellipse 350px 250px at 30% 80%, rgba(210,140,40,0.06), transparent);
+  pointer-events:none;
+}
+
+.page {
+  position:relative; z-index:1;
+  min-height:100vh;
+  display:flex; flex-direction:column;
+  align-items:center;
+  padding: 52px 20px 40px;
+}
+
+/* ── Header ── */
+header { text-align:center; margin-bottom:32px; }
+
+.tag {
+  display:inline-flex; align-items:center; gap:6px;
+  font-family:'DM Mono', monospace;
+  font-size:11px; font-weight:400;
+  letter-spacing:0.12em;
+  color: var(--dimmer);
+  border:1px solid var(--border);
+  padding:5px 14px;
+  border-radius:100px;
+  margin-bottom:18px;
+}
+
+.tag-dot {
+  width:5px; height:5px; border-radius:50%;
+  background: #8b83e0;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,100%{ opacity:1; transform:scale(1); }
+  50%{ opacity:0.4; transform:scale(0.7); }
+}
+
+h1 {
+  font-family:'Syne', sans-serif;
+  font-size: clamp(30px, 5.5vw, 58px);
+  font-weight:800;
+  letter-spacing:-0.04em;
+  line-height:1.05;
+  background: linear-gradient(140deg, #ffffff 40%, rgba(255,255,255,0.42) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:10px;
+}
+
+.subtitle {
+  font-family:'DM Mono', monospace;
+  font-size:11px;
+  color:var(--dimmer);
+  letter-spacing:0.06em;
+}
+
+/* ── Graph container ── */
+.graph-wrap {
+  width:100%;
+  max-width:900px;
+  height: min(620px, 78vh);
+  border:1px solid var(--border);
+  border-radius:20px;
+  background: var(--surface);
+  position:relative;
+  overflow:hidden;
+  flex-shrink:0;
+}
+
+#kg-svg { width:100%; height:100%; display:block; }
+
+.hint {
+  position:absolute; bottom:14px; right:16px;
+  font-family:'DM Mono',monospace;
+  font-size:10px; letter-spacing:0.08em;
+  color:rgba(255,255,255,0.18);
+  pointer-events:none;
+  display:flex; align-items:center; gap:6px;
+}
+
+.hint-icon {
+  width:13px; height:13px;
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:3px;
+  display:flex; align-items:center; justify-content:center;
+}
+
+#tip {
+  position:absolute;
+  background:rgba(12,12,32,0.96);
+  border:1px solid rgba(255,255,255,0.14);
+  color:#e6e6f0;
+  font-size:11px;
+  font-family:'DM Mono',monospace;
+  padding:6px 12px;
+  border-radius:8px;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .15s;
+  white-space:nowrap;
+  z-index:10;
+  letter-spacing:0.04em;
+}
+
+/* ── Legend ── */
+.legend {
+  margin-top:20px;
+  display:flex; flex-wrap:wrap; gap:12px;
+  justify-content:center;
+  max-width:860px;
+}
+
+.legend-item {
+  display:flex; align-items:center; gap:8px;
+  font-size:11px;
+  color:var(--muted);
+  font-family:'DM Mono',monospace;
+  letter-spacing:0.04em;
+}
+
+.legend-dot {
+  width:11px; height:11px; border-radius:50%;
+  border:1.5px solid;
+  flex-shrink:0;
+}
+
+/* ── Footer ── */
+footer {
+  margin-top:36px;
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  color:var(--dimmer);
+  letter-spacing:0.06em;
+  text-align:center;
+}
+
+footer a { color:inherit; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.15); }
+footer a:hover { color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="tag">
+      <span class="tag-dot"></span>
+      portfolio · skills graph
+    </div>
+    <h1>My Tech Skills</h1>
+    <p class="subtitle">drag nodes &nbsp;·&nbsp; hover to inspect &nbsp;·&nbsp; force-directed</p>
+  </header>
+
+  <div class="graph-wrap" id="gc">
+    <svg id="kg-svg"></svg>
+    <div class="hint">
+      <div class="hint-icon">
+        <svg width="7" height="7" viewBox="0 0 7 7" fill="none">
+          <circle cx="3.5" cy="3.5" r="2.5" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+        </svg>
+      </div>
+      drag to rearrange
+    </div>
+    <div id="tip"></div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#1a1650;border-color:#8b83e0;"></div>AI &amp; Agents</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#062820;border-color:#3dbf95;"></div>Data &amp; Knowledge</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#041828;border-color:#5ba8e8;"></div>ML &amp; NLP</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#1e1000;border-color:#e09820;"></div>Languages</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#200a05;border-color:#d8622a;"></div>Architecture</div>
+  </div>
+
+  <footer>
+    built with d3.js &nbsp;·&nbsp; hosted on
+    <a href="https://pages.github.com" target="_blank">github pages</a>
+  </footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+const PALETTE = {
+  gray:  {f:'#111126',s:'#77756e',t:'#c8c7c0',glow:'rgba(119,117,110,0.25)'},
+  purple:{f:'#18144a',s:'#8b83e0',t:'#c8c3f8',glow:'rgba(139,131,224,0.3)'},
+  teal:  {f:'#052318',s:'#3dbf95',t:'#80dfc0',glow:'rgba(61,191,149,0.28)'},
+  blue:  {f:'#031424',s:'#5ba8e8',t:'#a4cff5',glow:'rgba(91,168,232,0.28)'},
+  amber: {f:'#1c0e00',s:'#e09820',t:'#f5c868',glow:'rgba(224,152,32,0.28)'},
+  coral: {f:'#1e0803',s:'#d8622a',t:'#f5a080',glow:'rgba(216,98,42,0.28)'},
+};
+
+const rawNodes = [
+  {id:'root', ln:['Skills'],              type:'root',  color:'gray',   r:54},
+  {id:'ai',   ln:['AI &','Agents'],       type:'cat',   color:'purple', r:46},
+  {id:'data', ln:['Data &','Knowledge'],  type:'cat',   color:'teal',   r:46},
+  {id:'ml',   ln:['ML &','NLP'],          type:'cat',   color:'blue',   r:46},
+  {id:'lang', ln:['Languages'],           type:'cat',   color:'amber',  r:46},
+  {id:'arch', ln:['Archi-','tecture'],    type:'cat',   color:'coral',  r:46},
+
+  {id:'s1',  ln:['Agentic','AI'],         type:'skill', color:'purple', r:39, full:'AI Agents & Agentic AI',             cat:'ai'},
+  {id:'s2',  ln:['LangChain','LangGraph'],type:'skill', color:'purple', r:39, full:'LangChain & LangGraph',              cat:'ai'},
+  {id:'s3',  ln:['LlamaIndex'],           type:'skill', color:'purple', r:39, full:'LlamaIndex',                        cat:'ai'},
+  {id:'s4',  ln:['SAP','AI Core'],        type:'skill', color:'purple', r:39, full:'SAP AI Core',                       cat:'ai'},
+
+  {id:'s5',  ln:['RAG &','GraphRAG'],     type:'skill', color:'teal',   r:39, full:'RAG & GraphRAG',                    cat:'data'},
+  {id:'s6',  ln:['Knowledge','Graph'],    type:'skill', color:'teal',   r:39, full:'Knowledge Base & Knowledge Graph',  cat:'data'},
+
+  {id:'s7',  ln:['ML, LLM','& AI'],       type:'skill', color:'blue',   r:39, full:'Machine Learning, LLM & AI',        cat:'ml'},
+  {id:'s8',  ln:['NLP'],                  type:'skill', color:'blue',   r:39, full:'Natural Language Processing',       cat:'ml'},
+  {id:'s9',  ln:['Prompt','Eng.'],        type:'skill', color:'blue',   r:39, full:'Prompt Engineering',                cat:'ml'},
+
+  {id:'s10', ln:['Python'],               type:'skill', color:'amber',  r:39, full:'Python',                            cat:'lang'},
+  {id:'s11', ln:['Java &','Spring Boot'], type:'skill', color:'amber',  r:39, full:'Java & Spring Boot',                cat:'lang'},
+  {id:'s12', ln:['JS &','TypeScript'],    type:'skill', color:'amber',  r:39, full:'JavaScript & TypeScript',           cat:'lang'},
+
+  {id:'s13', ln:['Pipeline','Design'],    type:'skill', color:'coral',  r:39, full:'Architecture & Pipeline Designing', cat:'arch'},
+  {id:'s14', ln:['DS &','Algorithms'],    type:'skill', color:'coral',  r:39, full:'Data Structures & Algorithms',      cat:'arch'},
+];
+
+const rawLinks = [
+  {source:'root',target:'ai',   lt:'main'},
+  {source:'root',target:'data', lt:'main'},
+  {source:'root',target:'ml',   lt:'main'},
+  {source:'root',target:'lang', lt:'main'},
+  {source:'root',target:'arch', lt:'main'},
+  {source:'ai',  target:'s1',   lt:'skill'},
+  {source:'ai',  target:'s2',   lt:'skill'},
+  {source:'ai',  target:'s3',   lt:'skill'},
+  {source:'ai',  target:'s4',   lt:'skill'},
+  {source:'data',target:'s5',   lt:'skill'},
+  {source:'data',target:'s6',   lt:'skill'},
+  {source:'ml',  target:'s7',   lt:'skill'},
+  {source:'ml',  target:'s8',   lt:'skill'},
+  {source:'ml',  target:'s9',   lt:'skill'},
+  {source:'lang',target:'s10',  lt:'skill'},
+  {source:'lang',target:'s11',  lt:'skill'},
+  {source:'lang',target:'s12',  lt:'skill'},
+  {source:'arch',target:'s13',  lt:'skill'},
+  {source:'arch',target:'s14',  lt:'skill'},
+];
+
+const gc  = document.getElementById('gc');
+const tip = document.getElementById('tip');
+let sim;
+
+function buildGraph() {
+  const W = gc.clientWidth  || 900;
+  const H = gc.clientHeight || 620;
+
+  /* deep-clone so D3 mutations don't bleed between rebuilds */
+  const nodes = rawNodes.map(n => ({...n}));
+  const links = rawLinks.map(l => ({...l}));
+
+  const svg = d3.select('#kg-svg').attr('viewBox', `0 0 ${W} ${H}`);
+  svg.selectAll('*').remove();
+
+  /* glow filters */
+  const defs = svg.append('defs');
+  Object.entries(PALETTE).forEach(([key, val]) => {
+    const flt = defs.append('filter')
+      .attr('id', 'glow-'+key)
+      .attr('x','-60%').attr('y','-60%')
+      .attr('width','220%').attr('height','220%');
+    flt.append('feGaussianBlur').attr('stdDeviation', '5').attr('result','blur');
+    const mg = flt.append('feMerge');
+    mg.append('feMergeNode').attr('in','blur');
+    mg.append('feMergeNode').attr('in','SourceGraphic');
+  });
+
+  /* links */
+  const linkEl = svg.append('g')
+    .selectAll('line').data(links).join('line')
+    .attr('stroke', d => d.lt==='main'
+      ? 'rgba(255,255,255,0.18)'
+      : 'rgba(255,255,255,0.09)')
+    .attr('stroke-width',  d => d.lt==='main' ? 1.5 : 0.8)
+    .attr('stroke-dasharray', d => d.lt==='skill' ? '5,4' : null)
+    .attr('stroke-linecap','round');
+
+  /* node groups */
+  const nodeG = svg.append('g')
+    .selectAll('g').data(nodes).join('g')
+    .style('cursor','grab');
+
+  /* outer glow halo */
+  nodeG.append('circle')
+    .attr('r',  d => d.r + 10)
+    .attr('fill', d => PALETTE[d.color].glow)
+    .attr('filter', d => `url(#glow-${d.color})`);
+
+  /* main circle */
+  nodeG.append('circle')
+    .attr('r', d => d.r)
+    .attr('fill',   d => PALETTE[d.color].f)
+    .attr('stroke', d => PALETTE[d.color].s)
+    .attr('stroke-width', d => d.type==='root' ? 2 : d.type==='cat' ? 1.5 : 1);
+
+  /* ring pulse for root node */
+  nodeG.filter(d => d.type==='root').append('circle')
+    .attr('r', d => d.r + 14)
+    .attr('fill','none')
+    .attr('stroke', PALETTE.gray.s)
+    .attr('stroke-width', 0.5)
+    .attr('opacity', 0.35)
+    .attr('stroke-dasharray','4,6');
+
+  /* text labels */
+  nodeG.each(function(d) {
+    const g = d3.select(this);
+    const lh  = d.type==='root' ? 18 : d.type==='cat' ? 15 : 13;
+    const fs  = d.type==='root' ? 16 : d.type==='cat' ? 12 : 10;
+    const fw  = d.type==='skill' ? 400 : 700;
+    const total = (d.ln.length - 1) * lh;
+    d.ln.forEach((line, i) => {
+      g.append('text').text(line)
+        .attr('x', 0)
+        .attr('y', -total / 2 + i * lh)
+        .attr('text-anchor','middle')
+        .attr('dominant-baseline','central')
+        .attr('font-size', fs)
+        .attr('font-weight', fw)
+        .attr('fill', PALETTE[d.color].t)
+        .attr('font-family', "'Syne','DM Sans',sans-serif")
+        .style('pointer-events','none')
+        .style('user-select','none');
+    });
+    if (d.full) g.append('title').text(d.full);
+  });
+
+  /* hover tooltip */
+  nodeG.filter(d => d.type==='skill')
+    .on('mouseenter', function(ev, d) {
+      const wr = gc.getBoundingClientRect();
+      const cr = ev.currentTarget.getBoundingClientRect();
+      const cx = cr.left + cr.width  / 2 - wr.left;
+      const cy = cr.top  - wr.top - 14;
+      tip.textContent = d.full;
+      const tw = d.full.length * 7 + 28;
+      const lx = Math.max(8, Math.min(cx - tw/2, W - tw - 8));
+      const top = cy < 30 ? cr.bottom - wr.top + 8 : cy;
+      tip.style.cssText += `left:${lx}px;top:${top}px;opacity:1;`;
+    })
+    .on('mouseleave', () => { tip.style.opacity = 0; });
+
+  /* force simulation */
+  if (sim) sim.stop();
+  sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(links).id(d => d.id)
+      .distance(d => d.lt==='main' ? 145 : 95)
+      .strength(1))
+    .force('charge', d3.forceManyBody().strength(-580))
+    .force('center', d3.forceCenter(W/2, H/2))
+    .force('collide', d3.forceCollide(d => d.r + 15))
+    .on('tick', () => {
+      nodes.forEach(d => {
+        d.x = Math.max(d.r+10, Math.min(W-d.r-10, d.x));
+        d.y = Math.max(d.r+10, Math.min(H-d.r-10, d.y));
+      });
+      linkEl
+        .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+        .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+      nodeG.attr('transform', d => `translate(${d.x},${d.y})`);
+    });
+
+  /* drag */
+  nodeG.call(d3.drag()
+    .on('start', (e, d) => {
+      if (!e.active) sim.alphaTarget(0.3).restart();
+      d.fx = d.x; d.fy = d.y;
+      tip.style.opacity = 0;
+    })
+    .on('drag', (e, d) => {
+      d.fx = Math.max(d.r+10, Math.min(W-d.r-10, e.x));
+      d.fy = Math.max(d.r+10, Math.min(H-d.r-10, e.y));
+    })
+    .on('end', (e, d) => {
+      if (!e.active) sim.alphaTarget(0);
+      d.fx = null; d.fy = null;
+    })
+  );
+}
+
+buildGraph();
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(buildGraph, 180);
+});
+</script>
+</body>
+</html>

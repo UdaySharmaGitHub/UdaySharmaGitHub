@@ -20,31 +20,31 @@
 <tr>
 <td width="60" align="center">🚀</td>
 <td>
-**Building intelligent, autonomous systems** that solve complex enterprise problems at scale
+<strong> Building intelligent, autonomous systems</strong> that solve complex enterprise problems at scale
 </td>
 </tr>
 <tr>
 <td width="60" align="center">🧠</td>
 <td>
-**Tackling enterprise-scale automation** with multi-agent LLM systems that go beyond traditional pipelines
+<strong> Tackling enterprise-scale automation</strong> with multi-agent LLM systems that go beyond traditional pipelines
 </td>
 </tr>
 <tr>
 <td width="60" align="center">🕵️</td>
 <td>
-**Building AI Agents & Agentic AI** — autonomous, goal-driven systems that plan, reason, and execute complex tasks end-to-end
+<strong> Building AI Agents & Agentic AI</strong>strong>  — autonomous, goal-driven systems that plan, reason, and execute complex tasks end-to-end
 </td>
 </tr>
 <tr>
 <td width="60" align="center">⚡</td>
 <td>
-**Designing scalable AI architectures** — RAG, GraphRAG, stateful agents — for knowledge retrieval, reasoning & orchestration
+<strong> Designing scalable AI architectures</strong>strong>  — RAG, GraphRAG, stateful agents — for knowledge retrieval, reasoning & orchestration
 </td>
 </tr>
 <tr>
 <td width="60" align="center">🌐</td>
 <td>
-**Orchestrating workflows** across distributed systems with efficient, production-grade AI infrastructure
+<strong> Orchestrating workflows</strong>strong>  across distributed systems with efficient, production-grade AI infrastructure
 </td>
 </tr>
 </table>

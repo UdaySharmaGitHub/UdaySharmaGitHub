@@ -30,10 +30,10 @@ I Specialize in tackling enterprise-scale automation and decision-making challen
  <a href="https://github.com/UdaySharmaGitHub" target="_blank">
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="UdaySharmaGitHub" />
  </a>
- <a href="https://x.com/codewithuday" target="_blank">
+ <a href="https://x.com/aiithuday" target="_blank">
   <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
  </a>
- <a href="https://www.instagram.com/codewithuday.ig/" target="_blank">
+ <a href="https://www.instagram.com/udayyshrma/" target="_blank">
   <img src="https://img.shields.io/badge/Instagram-fe4164?style=for-the-badge&logo=instagram&logoColor=white" alt="Uday Sharma" />
  </a> 
     <a href="https://topmate.io/udaysharma" target="blank">

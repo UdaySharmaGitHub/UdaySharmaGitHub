@@ -219,6 +219,7 @@ graph TB
 ### All Badges🎯
 - ***@LeetCode***
 <p align="center">
+<img src="https://assets.leetcode.com/static_assets/others/50.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/others/2025.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/others/200.gif" width="50px"></img>
 <img src="https://assets.leetcode.com/static_assets/marketing/202512.gif" width="50px"></img>

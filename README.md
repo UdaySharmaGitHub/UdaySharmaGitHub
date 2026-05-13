@@ -8,7 +8,7 @@
 ### <img src="https://github.com/SP-XD/SP-XD/blob/main/images/message.gif?raw=true" width="30" />About Me 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=500&color=19FFD6&center=false&vCenter=false&width=600&lines=%F0%9F%A4%96+Agentic+AI+Developer;%F0%9F%92%BB+Software+Engineer;%F0%9F%A7%A0+Multi-Agent+Systems+Architect" alt="Roles" />
 
-- I'm an 🤖 ***Agentic AI Developer*** and 💻 ***Software Engineer***, passionate about building ***intelligent, autonomous systems*** that solve complex ***enterprise problems*** at scale. 🚀
+- I'm an 🤖 ***Agentic AI Developer*** and  💻 ***Software Engineer***, passionate about building ***intelligent, autonomous systems*** that solve complex ***enterprise problems*** at scale. 🚀
 - I Specialize in tackling ***enterprise-scale automation*** and ***decision-making challenges*** using ***multi-agent LLM systems*** 🧠. 
 - I focus on overcoming limitations of traditional pipelines by designing ***scalable, stateful AI architectures*** (⚡ ***RAG & GraphRAG***) that enable efficient ***knowledge retrieval***, ***reasoning***, and ***workflow orchestration*** across ***distributed systems***. 🌐
 

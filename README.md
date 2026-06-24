@@ -5,7 +5,7 @@
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
 
-### <img src="https://github.com/SP-XD/SP-XD/blob/main/images/message.gif?raw=true" width="30" />About  Me 
+### <img src="https://github.com/SP-XD/SP-XD/blob/main/images/message.gif?raw=true" width="30" />About Me 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=500&color=19FFD6&center=false&vCenter=false&width=600&lines=%F0%9F%A4%96+Agentic+AI+Developer;%F0%9F%92%BB+Software+Engineer;%F0%9F%A7%A0+Multi-Agent+Systems+Architect" alt="Roles" />
 
 - I'm an 🤖 ***Agentic AI Developer*** and  💻 ***Software Engineer***, passionate about building ***intelligent, autonomous systems*** that solve complex ***enterprise problems*** at  scale. 🚀

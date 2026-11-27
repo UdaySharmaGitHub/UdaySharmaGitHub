@@ -13,6 +13,10 @@ name: Update profile art
 permissions:
   contents: write
 
+concurrency:
+  group: update-profile-art
+  cancel-in-progress: true
+
 jobs:
   heatmap:
     runs-on: ubuntu-latest
@@ -53,3 +57,4 @@ jobs:
         with:
           commit_message: "chore: refresh contribution graph [skip ci]"
           file_pattern: "data/contributions.json data/repos.json data/stats.json contrib-heatmap.svg stats.svg cards/*.svg README.md"
+          push_options: "--force"

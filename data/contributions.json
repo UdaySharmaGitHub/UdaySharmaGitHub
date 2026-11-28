@@ -1,16 +1,16 @@
 {
   "username": "UdaySharmaGitHub",
-  "generated_at": "2026-11-28T11:27:11Z",
+  "generated_at": "2026-11-28T14:59:44Z",
   "range": {
     "start": "2025-11-23",
     "end": "2026-11-28"
   },
-  "total_contributions": 921,
-  "active_days": 228,
+  "total_contributions": 886,
+  "active_days": 219,
   "avg_per_active_day": 4.0,
   "current_streak": {
-    "length": 12,
-    "start": "2026-11-17",
+    "length": 1,
+    "start": "2026-11-28",
     "end": "2026-11-28"
   },
   "longest_streak": {
@@ -19,8 +19,8 @@
     "end": "2026-11-15"
   },
   "best_day": {
-    "date": "2026-11-21",
-    "count": 23
+    "date": "2026-10-31",
+    "count": 17
   },
   "monthly": [
     {
@@ -45,19 +45,19 @@
     },
     {
       "month": "2026-04",
-      "total": 91
+      "total": 84
     },
     {
       "month": "2026-05",
-      "total": 119
+      "total": 117
     },
     {
       "month": "2026-06",
-      "total": 51
+      "total": 48
     },
     {
       "month": "2026-07",
-      "total": 102
+      "total": 101
     },
     {
       "month": "2026-08",
@@ -69,11 +69,11 @@
     },
     {
       "month": "2026-10",
-      "total": 147
+      "total": 146
     },
     {
       "month": "2026-11",
-      "total": 181
+      "total": 160
     }
   ],
   "days": [
@@ -789,7 +789,7 @@
     },
     {
       "date": "2026-04-14",
-      "count": 5,
+      "count": 4,
       "level": 2
     },
     {
@@ -849,8 +849,8 @@
     },
     {
       "date": "2026-04-26",
-      "count": 10,
-      "level": 3
+      "count": 4,
+      "level": 2
     },
     {
       "date": "2026-04-27",
@@ -874,7 +874,7 @@
     },
     {
       "date": "2026-05-01",
-      "count": 3,
+      "count": 2,
       "level": 1
     },
     {
@@ -934,8 +934,8 @@
     },
     {
       "date": "2026-05-13",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-05-14",
@@ -1129,13 +1129,13 @@
     },
     {
       "date": "2026-06-21",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-06-22",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-06-23",
@@ -1144,8 +1144,8 @@
     },
     {
       "date": "2026-06-24",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-06-25",
@@ -1194,8 +1194,8 @@
     },
     {
       "date": "2026-07-04",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-07-05",
@@ -1714,7 +1714,7 @@
     },
     {
       "date": "2026-10-16",
-      "count": 2,
+      "count": 1,
       "level": 1
     },
     {
@@ -1820,7 +1820,7 @@
     {
       "date": "2026-11-06",
       "count": 11,
-      "level": 3
+      "level": 4
     },
     {
       "date": "2026-11-07",
@@ -1889,48 +1889,48 @@
     },
     {
       "date": "2026-11-20",
-      "count": 6,
-      "level": 2
-    },
-    {
-      "date": "2026-11-21",
-      "count": 23,
-      "level": 4
-    },
-    {
-      "date": "2026-11-22",
-      "count": 1,
-      "level": 1
-    },
-    {
-      "date": "2026-11-23",
-      "count": 5,
-      "level": 2
-    },
-    {
-      "date": "2026-11-24",
       "count": 3,
       "level": 1
     },
     {
-      "date": "2026-11-25",
-      "count": 1,
+      "date": "2026-11-21",
+      "count": 12,
+      "level": 4
+    },
+    {
+      "date": "2026-11-22",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-23",
+      "count": 4,
+      "level": 2
+    },
+    {
+      "date": "2026-11-24",
+      "count": 2,
       "level": 1
+    },
+    {
+      "date": "2026-11-25",
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-11-26",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-11-27",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-11-28",
-      "count": 4,
-      "level": 2
+      "count": 3,
+      "level": 1
     }
   ]
 }

@@ -32,7 +32,9 @@ jobs:
           output-dir: koi
 
       - name: Rename to koi-light.gif
-        run: mv koi/koi.gif koi/koi-light.gif
+        run: |
+          mv koi/koi.gif koi/koi-light.gif
+          rm -rf /home/runner/work/_temp/git-koi
 
       - name: Draw white koi (dark theme)
         uses: yalongwastaken/git-koi@v1.0.2

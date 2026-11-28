@@ -4,12 +4,9 @@ name: Koi
 on:
   schedule:
     - cron: "20 0 * * *"
-
   workflow_dispatch:
-
   push:
-    paths:
-      - .github/workflows/koi.yml
+    paths: [.github/workflows/koi.yml]
 
 permissions:
   contents: write
@@ -24,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: yalongwastaken/git-koi@v1.0.2
+      - uses: yalongwastaken/git-koi@v1
         with:
           body: asagi
           output-dir: koi
@@ -41,11 +38,9 @@ jobs:
             exit 0
           fi
 
-          git config user.name "Uday Sharma"
-          git config user.email "udaysharmaprojects+git@gmail.com"
-
-          git commit --quiet --message "koi: draw the day's koi (light)"
-          git pull --rebase origin main
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --quiet --message "koi: draw the day's koi"
           git push --quiet
 
   koi-dark:
@@ -54,7 +49,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: yalongwastaken/git-koi@v1.0.2
+      - uses: yalongwastaken/git-koi@v1
         with:
           body: white
           output-dir: koi
@@ -70,9 +65,7 @@ jobs:
             exit 0
           fi
 
-          git config user.name "Uday Sharma"
-          git config user.email "udaysharmaprojects+git@gmail.com"
-
-          git commit --quiet --message "koi: draw the day's koi (dark)"
-          git pull --rebase origin main
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --quiet --message "koi: draw the day's koi"
           git push --quiet

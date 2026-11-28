@@ -14,7 +14,9 @@ on:
 permissions:
   contents: write
 
-concurrency: koi
+concurrency:
+  group: koi
+  cancel-in-progress: true
 
 jobs:
   koi:
@@ -44,4 +46,5 @@ jobs:
           git config user.email "udaysharmaprojects+git@gmail.com"
 
           git commit --quiet --message "koi: draw the day's koi"
+          git pull --rebase origin main
           git push --quiet

@@ -26,9 +26,9 @@
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./koi/koi.gif" />
-  <source media="(prefers-color-scheme: light)" srcset="./koi/koi.gif" />
-  <img src="./koi/koi.gif" width="256" alt="Git Koi swimming in a pond — every contribution leaves a ripple" />
+  <source media="(prefers-color-scheme: dark)" srcset="./koi/koi-dark.gif" />
+  <source media="(prefers-color-scheme: light)" srcset="./koi/koi-light.gif" />
+  <img src="./koi/koi-light.gif" width="256" alt="Git Koi swimming in a pond — every contribution leaves a ripple" />
 </picture>
 <br>
 <i>Every contribution leaves a ripple.</i>

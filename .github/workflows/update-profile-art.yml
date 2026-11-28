@@ -9,6 +9,12 @@ name: Update profile art
   workflow_dispatch: {}
   push:
     branches: [main]
+    paths:
+      - "scripts/**"
+      - "data/**"
+      - "cards/**"
+      - "fonts/**"
+      - "images/**"
 
 permissions:
   contents: write
@@ -56,5 +62,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh contribution graph [skip ci]"
-          file_pattern: "data/contributions.json data/repos.json data/stats.json contrib-heatmap.svg stats.svg cards/*.svg README.md"
+          file_pattern: "data/contributions.json data/repos.json data/stats.json data/me_photo.hash contrib-heatmap.svg stats.svg cards/*.svg README.md"
           push_options: "--force"

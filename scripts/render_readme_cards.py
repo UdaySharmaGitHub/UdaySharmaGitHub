@@ -16,6 +16,7 @@ Run by .github/workflows/update-profile-art.yml after fetch_contributions.py.
 """
 import base64
 import datetime
+import hashlib
 import json
 import os
 import re
@@ -27,6 +28,7 @@ DATA = os.path.join(ROOT, "data", "contributions.json")
 OUT = os.path.join(ROOT, "cards")
 FONTS = os.path.join(ROOT, "fonts")
 PORTRAIT = os.path.join(ROOT, "uday-ascii.svg")
+_PHOTO_HASH_FILE = os.path.join(ROOT, "data", "me_photo.hash")
 
 # ---- hand-set numbers (replace with your real figures) ----------------------
 BLOG_COUNT = "100+"   # blogs published on Medium (hand-set; not on the GitHub API)
@@ -182,44 +184,61 @@ def text_lines(x, y, lines, lh, attrs):
     )
 
 
+def hex_rgb(h):
+    h = h.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def duotone_webp(path, w, h, dark_hex, light_hex, scale=2, quality=82):
+    """Map a photo onto a two-colour (duotone) ramp and return base64 WebP.
+
+    Shadows -> dark_hex, highlights -> light_hex. Rendered at `scale`x for
+    retina crispness; WebP keeps it ~20-40 KB vs the 1.1 MB ASCII portrait.
+    """
+    from io import BytesIO
+    from PIL import Image, ImageOps
+    im = ImageOps.exif_transpose(Image.open(path).convert("RGB"))
+    im = ImageOps.fit(im, (w * scale, h * scale), Image.LANCZOS, centering=(0.5, 0.36))
+    g = ImageOps.autocontrast(ImageOps.grayscale(im), cutoff=2)
+    duo = ImageOps.colorize(g, black=hex_rgb(dark_hex), white=hex_rgb(light_hex))
+    buf = BytesIO()
+    duo.save(buf, "WEBP", quality=quality, method=6)
+    return base64.b64encode(buf.getvalue()).decode()
+
+
+def _photo_changed() -> bool:
+    """Return True if images/me.png hash differs from the cached hash (or no cache yet)."""
+    photo_path = os.path.join(ROOT, "images", "me.png")
+    if not os.path.exists(photo_path):
+        return False
+    h = hashlib.sha256(open(photo_path, "rb").read()).hexdigest()
+    if os.path.exists(_PHOTO_HASH_FILE) and open(_PHOTO_HASH_FILE).read().strip() == h:
+        return False
+    open(_PHOTO_HASH_FILE, "w").write(h)
+    return True
+
+
 # ---- 1 · hero -----------------------------------------------------------------
 def hero():
     h = 420
-    src = open(PORTRAIT).read()
-    rows = re.findall(r'<text xml:space="preserve"[^>]*\by="([\d.]+)"[^>]*>(.*?)</text>', src, re.S)
-    n = len(rows)
-    # sample colour per character from the source photo so the portrait is full-colour
-    ncols = max((len(t) for _, t in rows), default=1)
-    ppx = None
+    PX, PY, PW, PH = 552, 44, 288, 332  # portrait panel on the right
+    duo_dark, duo_light = ("#0d1117", "#e6edf3") if THEME == "dark" else ("#141414", "#f3f3f1")
     try:
-        from PIL import Image, ImageEnhance
-        pim = Image.open(os.path.join(ROOT, "images", "me.png")).convert("RGB")
-        pim = ImageEnhance.Color(pim).enhance(1.5)        # saturation: higher = more colourful
-        pim = ImageEnhance.Contrast(pim).enhance(1.5)     # contrast: higher = punchier darks/lights
-        pim = pim.resize((ncols, n), Image.LANCZOS)
-        ppx = pim.load()
-    except Exception as e:                                  # no photo/Pillow: fall back to mono
-        print(f"portrait colour unavailable ({e}); using {INK}")
-    portrait = []
-    for i, (y, txt) in enumerate(rows):
-        if ppx is None:
-            content = txt
-        else:
-            spans = []
-            for j, ch in enumerate(txt):
-                if ch == " ":
-                    spans.append(" ")
-                    continue
-                r, g, b = ppx[min(j, ncols - 1), min(i, n - 1)]
-                spans.append(f'<tspan fill="#{r:02x}{g:02x}{b:02x}">{escape(ch)}</tspan>')
-            content = "".join(spans)
-        # rows "print" top to bottom like a slow terminal
-        portrait.append(
-            f'<text class="f" style="animation-delay:{0.25 + i * 0.018:.3f}s;animation-duration:.35s" '
-            f'xml:space="preserve" x="20" y="{y}" font-size="7.2" '
-            f'textLength="800" lengthAdjust="spacing">{content}</text>'
+        b64 = duotone_webp(os.path.join(ROOT, "images", "me.png"), PW, PH, duo_dark, duo_light)
+        photo = (
+            f'<clipPath id="pclip"><rect x="{PX}" y="{PY}" width="{PW}" height="{PH}" rx="20"/></clipPath>'
+            f'<image x="{PX}" y="{PY}" width="{PW}" height="{PH}" preserveAspectRatio="xMidYMid slice" '
+            f'clip-path="url(#pclip)" href="data:image/webp;base64,{b64}"/>'
+            f'<rect x="{PX}" y="{PY}" width="{PW}" height="{PH}" rx="20" fill="none" '
+            f'stroke="{RULE}" stroke-width="1"/>'
         )
-    s = 0.41
+    except Exception as e:                                  # no photo/Pillow: fall back to initials
+        print(f"hero photo unavailable ({e}); using initials")
+        photo = (
+            f'<rect x="{PX}" y="{PY}" width="{PW}" height="{PH}" rx="20" fill="{PAPER_DEEP}"/>'
+            f'<text x="{PX + PW / 2}" y="{PY + PH / 2 + 30}" text-anchor="middle" '
+            f'font-family="{SERIF}" font-style="italic" font-size="96" fill="{MUTED}">US</text>'
+        )
     body = f"""
 <defs>
   <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="0">
@@ -244,8 +263,8 @@ def hero():
   <text x="48" y="396" font-family="{MONO}" font-size="13" fill="{INK}">medium.com/@neuraldev</text>
   <text class="nu" x="232" y="396" font-family="{MONO}" font-size="13" fill="{TECH}">&#8599;</text>
 </g>
-<g transform="translate(520 46) scale({s}) translate(-20 -37)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
-  {''.join(portrait)}
+<g class="r" {d(0.4)}>
+  {photo}
 </g>
 """
     write("hero.svg", svg(W, h, body, ["serif", "serif-i", "sans", "mono"],
@@ -540,7 +559,11 @@ if __name__ == "__main__":
     data = json.load(open(DATA))
     repos = load_repos()
     stats = load_stats()
-    hero()
+    render_hero = _photo_changed()
+    if render_hero:
+        hero()
+    else:
+        print("hero: me.png unchanged, skipping re-render")
     tile("build", "BUILD", TECH, "#ffffff", "15+", "projects",
          "Agentic AI: multi-agent LLMs, RAG & GraphRAG, autonomous systems.", 3.1, 0)
     tile("brand", "BLOGS", STUDIO, "#ffffff", BLOG_COUNT, "published",
@@ -564,7 +587,8 @@ if __name__ == "__main__":
     # ---- dark variants (served via <picture> in the README) -----------------
     apply_theme("dark")
     SUFFIX = "-dark"
-    hero()
+    if render_hero:
+        hero()
     activity(data)
     for i, (name, display, desc, lang, color, stars) in enumerate(repos):
         repo_card(i, name, display, desc, lang, color, stars)

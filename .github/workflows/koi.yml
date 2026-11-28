@@ -25,17 +25,32 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: yalongwastaken/git-koi@v1
+      - name: Draw asagi koi (light theme)
+        uses: yalongwastaken/git-koi@v1
+        with:
+          body: asagi
+          size: 768x256
+          scale: 1
+          output-dir: koi
+
+      - name: Rename to koi-light.gif
+        run: mv koi/koi.gif koi/koi-light.gif
+
+      - name: Draw white koi (dark theme)
+        uses: yalongwastaken/git-koi@v1
         with:
           body: white
           size: 768x256
           scale: 1
           output-dir: koi
 
+      - name: Rename to koi-dark.gif
+        run: mv koi/koi.gif koi/koi-dark.gif
+
       - name: Commit the koi if it changed
         shell: bash
         run: |
-          git add koi/koi.gif
+          git add koi/koi-light.gif koi/koi-dark.gif
 
           if git diff --cached --quiet; then
             echo "The koi is unchanged; nothing to commit."

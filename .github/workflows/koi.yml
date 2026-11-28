@@ -26,22 +26,18 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Draw asagi koi (light theme)
-        uses: yalongwastaken/git-koi@v1
+        uses: yalongwastaken/git-koi@v1.0.2
         with:
           body: asagi
-          size: 768x256
-          scale: 1
           output-dir: koi
 
       - name: Rename to koi-light.gif
         run: mv koi/koi.gif koi/koi-light.gif
 
       - name: Draw white koi (dark theme)
-        uses: yalongwastaken/git-koi@v1
+        uses: yalongwastaken/git-koi@v1.0.2
         with:
           body: white
-          size: 768x256
-          scale: 1
           output-dir: koi
 
       - name: Rename to koi-dark.gif

@@ -19,45 +19,60 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  koi:
+  koi-light:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Draw asagi koi (light theme)
-        uses: yalongwastaken/git-koi@v1.0.2
+      - uses: yalongwastaken/git-koi@v1.0.2
         with:
           body: asagi
           output-dir: koi
 
-      - name: Rename to koi-light.gif
-        run: |
-          mv koi/koi.gif koi/koi-light.gif
-          rm -rf /home/runner/work/_temp/git-koi
-
-      - name: Draw white koi (dark theme)
-        uses: yalongwastaken/git-koi@v1.0.2
-        with:
-          body: white
-          output-dir: koi
-
-      - name: Rename to koi-dark.gif
-        run: mv koi/koi.gif koi/koi-dark.gif
-
-      - name: Commit the koi if it changed
+      - name: Commit light koi
         shell: bash
         run: |
-          git add koi/koi-light.gif koi/koi-dark.gif
+          mv koi/koi.gif koi/koi-light.gif
+          git add koi/koi-light.gif
+          git rm --ignore-unmatch -f koi/koi.gif
 
           if git diff --cached --quiet; then
-            echo "The koi is unchanged; nothing to commit."
+            echo "Light koi unchanged; nothing to commit."
             exit 0
           fi
 
           git config user.name "Uday Sharma"
           git config user.email "udaysharmaprojects+git@gmail.com"
 
-          git commit --quiet --message "koi: draw the day's koi"
+          git commit --quiet --message "koi: draw the day's koi (light)"
+          git pull --rebase origin main
+          git push --quiet
+
+  koi-dark:
+    runs-on: ubuntu-latest
+    needs: koi-light
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: yalongwastaken/git-koi@v1.0.2
+        with:
+          body: white
+          output-dir: koi
+
+      - name: Commit dark koi
+        shell: bash
+        run: |
+          mv koi/koi.gif koi/koi-dark.gif
+          git add koi/koi-dark.gif
+
+          if git diff --cached --quiet; then
+            echo "Dark koi unchanged; nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "Uday Sharma"
+          git config user.email "udaysharmaprojects+git@gmail.com"
+
+          git commit --quiet --message "koi: draw the day's koi (dark)"
           git pull --rebase origin main
           git push --quiet

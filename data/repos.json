@@ -1,0 +1,26 @@
+[
+  {
+    "name": "UdaySharmaGitHub",
+    "display": "UdaySharmaGitH",
+    "description": "UdaySharmaGitHub",
+    "language": "Python",
+    "color": "#2f55ff",
+    "stars": 2
+  },
+  {
+    "name": "CLIC-Agentic-CLI-like-Code-Claude",
+    "display": "CLIC-Agentic-C",
+    "description": "CLIC (Agentic CLI like ClaudeCode) \u2014 Command Line Intelligence Companion ",
+    "language": "TypeScript",
+    "color": "#2f55ff",
+    "stars": 1
+  },
+  {
+    "name": "Rebuilding-Instagram-algorithm",
+    "display": "Rebuilding-Ins",
+    "description": "Rebuilding-Instagram-algorithm",
+    "language": "Code",
+    "color": "#6e6e73",
+    "stars": 0
+  }
+]

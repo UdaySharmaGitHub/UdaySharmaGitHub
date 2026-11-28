@@ -1,0 +1,55 @@
+name: Update profile art
+
+# Refreshes the contribution graph + stats card SVGs daily from real data.
+# Runs daily, plus whenever you push to main, plus on-demand.
+
+"on":
+  schedule:
+    - cron: "17 6 * * *"   # ~06:17 UTC every day
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  heatmap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Scrape real contribution data (no auth needed)
+        run: python scripts/fetch_contributions.py
+
+      - name: Fetch 3 most recently pushed repos
+        run: python scripts/fetch_repos.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch profile stats (followers, stars, repos, tutorials)
+        run: python scripts/fetch_stats.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Render animated contribution graph SVG
+        run: python scripts/generate_streak_svg.py UdaySharmaGitHub contrib-heatmap.svg
+
+      - name: Render streak / numbers card
+        run: python scripts/render_stats_svg.py
+
+      - name: Render README cards (hero, tiles, activity, repos, blue graph)
+        run: python scripts/render_readme_cards.py
+
+      - name: Commit updated art
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh contribution graph [skip ci]"
+          file_pattern: "data/contributions.json data/repos.json data/stats.json contrib-heatmap.svg stats.svg cards/*.svg README.md"
